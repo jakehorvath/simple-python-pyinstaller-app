@@ -9,7 +9,7 @@ pipeline {
             }
             steps {
                 sh 'python -m py_compile sources/add2vals.py sources/calc.py'
-submitJUnitTestResultsToqTest([apiKey: '0afd1028-4eb7-46a2-a3c9-8144995d1cdb', containerID: 347800, containerType: 'release', createTestCaseForEachJUnitTestClass: false, createTestCaseForEachJUnitTestMethod: true, overwriteExistingTestSteps: true, parseTestResultsFromTestingTools: false, projectID: 84112, qtestURL: 'https://confirmation.qtestnet.com', submitToAReleaseAsSettingFromQtest: true, submitToExistingContainer: false, utilizeTestResultsFromCITool: true])                
+submitJUnitTestResultsToqTest([apiKey: '0afd1028-4eb7-46a2-a3c9-8144995d1cdb', containerID: 347800, containerType: 'release', createTestCaseForEachJUnitTestClass: true, createTestCaseForEachJUnitTestMethod: false, overwriteExistingTestSteps: true, parseTestResultsFromTestingTools: false, projectID: 84112, qtestURL: 'https://confirmation.qtestnet.com', submitToAReleaseAsSettingFromQtest: true, submitToExistingContainer: false, utilizeTestResultsFromCITool: true])
             }
         }
         stage('Test') {
