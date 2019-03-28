@@ -44,7 +44,8 @@ class TestCalc(unittest.TestCase):
         result = calc.add2('abc', '5.5')
         self.assertEqual(result, 'abc5.5')
 
-        
+    def test_failed(self):
+        assert False, "This test will fail"
     
         
 if __name__ == '__main__':
